@@ -11,23 +11,23 @@ CREATE TABLE datadoc (
 	feature_image text
 );
 CREATE TABLE Page (
-  id_page text PRIMARY KEY,
+  id_page SERIAL PRIMARY KEY,
+  id_fb_page text,
   name_page text,
   link_page text
 );
 
 CREATE TABLE Post_Page (
-  id_post_page SERIAL PRIMARY KEY,
-  id_page text,
-  id_post text,
+  id_post SERIAL PRIMARY KEY,
+  id_fb_post text,
   publish_time date,
   content text
 );
 
 CREATE TABLE Comment (
   id_comment SERIAL PRIMARY KEY,
-  id_post_page int,
-  id_post text,
+  id_post int,
   id_user text,
-  content text
+  content text,
+  publish_time date
 );
