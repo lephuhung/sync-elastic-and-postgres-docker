@@ -10,21 +10,21 @@ CREATE TABLE datadoc (
 	content text,
 	feature_image text
 );
-CREATE TABLE Page (
+CREATE TABLE page (
   id_page SERIAL PRIMARY KEY,
   id_fb_page text,
   name_page text,
   link_page text
 );
 
-CREATE TABLE Post_Page (
+CREATE TABLE post (
   id_post SERIAL PRIMARY KEY,
   id_fb_post text,
   publish_time date,
   content text
 );
 
-CREATE TABLE Comment (
+CREATE TABLE comment (
   id_comment SERIAL PRIMARY KEY,
   id_post int,
   id_user text,

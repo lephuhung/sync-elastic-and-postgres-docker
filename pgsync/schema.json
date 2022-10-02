@@ -1,29 +1,23 @@
 [
   {
     "database": "postgres",
-    "index": "datadoc",
+    "index": "datadoc_index",
     "nodes": {
-      "table": "datadoc",
-      "schema": "public",
-      "columns": []
+      "table": "datadoc"
     }
   },
   {
     "database": "postgres",
-    "index": "FB_Post",
+    "index": "post_index",
     "nodes": {
-      "table": "Post_Page",
-      "schema": "public",
-      "columns": []
+      "table": "post"
     }
   },
   {
     "database": "postgres",
-    "index": "FB_Comment",
+    "index": "comment_index",
     "nodes": {
-      "table": "Comment",
-      "schema": "public",
-      "columns": []
+      "table": "comment"
     }
   }
 ]
