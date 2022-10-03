@@ -5,18 +5,12 @@ services:
     restart: on-failure
     ports:
       - "9200:9200"
-    volumes:
-      - ./target/releases/elasticsearch-analysis-vietnamese-${ES_VERSION}.zip:/usr/share/elasticsearch/plugin/elasticsearch-analysis-vietnamese-${ES_VERSION}.zip
-      - ./install-es-plugin.sh:/apps/install-es-plugin.sh
-    entrypoint:
-      - /apps/install-es-plugin.sh
     environment:
       - xpack.security.enabled=false
       - discovery.type=single-node
       - bootstrap.memory_lock=true
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
       - "ES_VERSION=8.2.2"
-      - "discovery.type=single-node"
     ulimits:
       memlock:
         soft: -1
@@ -47,7 +41,6 @@ services:
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_HOST_AUTH_METHOD=trust
-      - listen_addresses = '*'
 
   redis:
     image: 'redis:alpine'
