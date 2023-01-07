@@ -62,6 +62,8 @@ services:
       - PG_HOST=database
       - ELASTICSEARCH_HOST=elasticsearch
       - REDIS_HOST=redis
+    networks:
+      - nckh
 networks:
   nckh:
     external: true

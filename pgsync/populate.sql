@@ -31,3 +31,8 @@ CREATE TABLE comment (
   content text,
   publish_time date
 );
+CREATE  TABLE tags_data (
+  id_tags_data SERIAL PRIMARY KEY,
+  id_data text,
+  id_tags int
+)
