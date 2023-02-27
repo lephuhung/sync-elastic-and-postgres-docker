@@ -3,7 +3,7 @@
     "database": "postgres",
     "index": "datadoc_index",
     "nodes": {
-      "table": "postgres"
+      "table": "datadoc"
     }
   },
   {

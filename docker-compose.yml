@@ -10,7 +10,6 @@ services:
       - discovery.type=single-node
       - bootstrap.memory_lock=true
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
-      - "ES_VERSION=8.2.2"
     ulimits:
       memlock:
         soft: -1
